@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SemanticWeb", "src\SemanticWeb\SemanticWeb.csproj", "{BA839AA9-6128-4308-A9BF-6B4CD2F363B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3CC0FBA7-E095-426C-B6D7-B92822D723DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3167F6DA-ED59-488D-BFF3-2D66282C5627}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA839AA9-6128-4308-A9BF-6B4CD2F363B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA839AA9-6128-4308-A9BF-6B4CD2F363B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA839AA9-6128-4308-A9BF-6B4CD2F363B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA839AA9-6128-4308-A9BF-6B4CD2F363B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA839AA9-6128-4308-A9BF-6B4CD2F363B7} = {3CC0FBA7-E095-426C-B6D7-B92822D723DD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3971F6D1-62F6-4F56-B35C-61B3D3F18918}
+	EndGlobalSection
+EndGlobal

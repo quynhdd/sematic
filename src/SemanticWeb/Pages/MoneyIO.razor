@@ -1,0 +1,52 @@
+﻿@page "/MoneyIO"
+@inherits MoneyIOBase
+@using System.Globalization
+
+<div class="form-group">
+    @*<div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Tiền vào / ra</h3>
+            </div>
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>*@
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Biểu đồ</h3>
+            </div>
+            <div class="card-body">
+                <RadzenChart>
+                    <RadzenColumnSeries Data="@MoneyIn" CategoryProperty="Name" Title="Tiền Vào" LineType="LineType.Dashed" ValueProperty="Value" />
+                    <RadzenColumnSeries Data="@MoneyOut" CategoryProperty="Name" Title="Tiền Ra" ValueProperty="Value" />
+                    <RadzenColumnOptions Radius="5" />
+                    <RadzenValueAxis Formatter="@FormatAsUSD">
+                        <RadzenGridLines Visible="true" />
+                        <RadzenAxisTitle Text="Tiền vào / ra" />
+                    </RadzenValueAxis>
+                </RadzenChart>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pt-2">
+    <Radzen.Blazor.RadzenGrid AllowFiltering="true" PagerPosition="Radzen.PagerPosition.Bottom" AllowPaging="true" PageSize="5" AllowSorting="true" Data="@mnio" @ref="grv_transfer" TItem="MoneylnOut" AllowColumnResize="true">
+        <Columns>
+            <RadzenGridColumn Width="40px" TItem="MoneylnOut" Title="STT" Filterable="false" Sortable="false" TextAlign="Radzen.TextAlign.Center">
+                <Template Context="clubName">
+                    @(  (((grv_transfer.CurrentPage) * grv_transfer.PageSize) + (mnio.IndexOf(clubName))) + 1 )
+                </Template>
+            </RadzenGridColumn>
+            <Radzen.Blazor.RadzenGridColumn TItem="MoneylnOut" Property="clubName" Title="Tên câu lạc bộ" Width="30%" TextAlign="Radzen.TextAlign.Left"></Radzen.Blazor.RadzenGridColumn>
+            <Radzen.Blazor.RadzenGridColumn TItem="MoneylnOut" Property="inMoney" Title="Tiền thu vào" Width="30%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+            <Radzen.Blazor.RadzenGridColumn TItem="MoneylnOut" Property="outMoney" Title="Tiền xuất ra" Width="30%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+        </Columns>
+    </Radzen.Blazor.RadzenGrid>
+</div>
+
+@code {
+    
+}

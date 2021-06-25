@@ -1,0 +1,52 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">SemanticWeb</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <RadzenPanelMenu>
+            <RadzenPanelMenuItem Text="Trang chủ" Path="/" Icon="home"></RadzenPanelMenuItem>
+            <RadzenPanelMenuItem Text="Truy vấn" Icon="search">
+                <RadzenPanelMenuItem Text="Tiền vào ra" Path="MoneyIO" Icon="payment"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Top 10 chuyển nhượng" Path="Top10" Icon="line_weight"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Lệ phí chuyển nhượng" Path="MoneyFlow" Icon="input"></RadzenPanelMenuItem>
+                <RadzenPanelMenuItem Text="Truy vấn thông tin cầu thủ" Path="QueryPlayer" Icon="search"></RadzenPanelMenuItem>
+            </RadzenPanelMenuItem>            
+            <RadzenPanelMenuItem Text="Thêm dữ liệu" Path="InsertData" Icon="description"></RadzenPanelMenuItem>
+        </RadzenPanelMenu>
+        @*<li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/Top10" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Top 10 chuyển nhượng
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/MoneyIO" Match="NavLinkMatch.All">
+                <span class="oi oi-plus" aria-hidden="true"></span> Tiền vào / ra
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="/MoneyFlow" Match="NavLinkMatch.All">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Lệ phí chuyển nhượng
+            </NavLink>
+        </li>*@
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

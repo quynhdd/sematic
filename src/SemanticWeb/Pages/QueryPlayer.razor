@@ -1,0 +1,57 @@
+﻿@page "/QueryPlayer"
+@inherits QueryPlayerBase
+<h1>Truy vấn thông tin cầu thủ</h1>
+<div class="row td_search pt-2">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="padding-8">Tên cầu thủ</p>
+                    </div>
+                    <div class="col-md-6 pd-right-0">
+                        <RadzenDropDown AllowClear="true" TValue="string" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" AllowFiltering="true"
+                                        Placeholder="Chọn tên cầu thủ" Data=@data @bind-Value="query.playerName" TextProperty="text" ValueProperty="value" Style="width:100%" Change=@(args => changePlayer(Convert.ToString(args))) />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card pt-2 col-md-12">
+    <div class="card-header">
+        <h4>Thông tin cầu thủ</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Họ tên</label>
+                    <RadzenTextBox @bind-Value=@query1.playerName type="text" style="width:100%; text-align:left" Disabled=true />
+                </div>
+                <div class="form-group">
+                    <label>Vị trí thi đấu</label>
+                    <RadzenTextBox @bind-Value=@query1.position type="text" style="width:100%; text-align:left" Disabled=true />
+                </div>
+                <div class="form-group">
+                    <label>Tuổi</label>
+                    <RadzenTextBox @bind-Value=@query1.age type="text" style="width:100%; text-align:left" Disabled=true />
+                </div>
+                <div class="form-group">
+                    <label>Quốc gia</label>
+                    <RadzenTextBox @bind-Value=@query1.nationality type="text" style="width:100%; text-align:left" Disabled=true />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Hình ảnh</label>
+                    <RadzenImage Path="@query1.image" Style="width:200px"></RadzenImage>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

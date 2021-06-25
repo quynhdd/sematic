@@ -1,0 +1,20 @@
+﻿@page "/Top10"
+@inherits Top10Base
+
+<h1>Top 10 chuyển nhượng</h1>
+<Radzen.Blazor.RadzenGrid AllowFiltering="true" PagerPosition="Radzen.PagerPosition.Bottom" AllowPaging="true" PageSize="10" AllowSorting="true" Data="@t10" @ref="grv_transfer" TItem="Top10Tranfers" AllowColumnResize="true">
+    <Columns>
+        <RadzenGridColumn Width="40px" TItem="Top10Tranfers" Title="STT" Filterable="false" Sortable="false" TextAlign="Radzen.TextAlign.Center">
+            <Template Context="namePlayer">
+                @(  (((grv_transfer.CurrentPage) * grv_transfer.PageSize) + (t10.IndexOf(namePlayer))) + 1 )
+            </Template>
+        </RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="Top10Tranfers" Property="namePlayer" Title="Tên cầu thủ" Width="20%" TextAlign="Radzen.TextAlign.Left"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="Top10Tranfers" Property="fromClub" Title="Câu lạc bộ chuyển" Width="30%" TextAlign="Radzen.TextAlign.Left"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="Top10Tranfers" Property="toClub" Title="Câu lạc bộ nhận" Width="30%" TextAlign="Radzen.TextAlign.Left"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="Top10Tranfers" Property="price" Title="Giá tiền" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+    </Columns>
+</Radzen.Blazor.RadzenGrid>
+@code {
+
+}

@@ -1,10 +1,11 @@
-call apoc.load.json("https://github.com/mneedham/football-transfers/raw/master/data/transfers.json")
+call apoc.load.json("https://raw.githubusercontent.com/quynhdd/sematic/master/data/transfers.json")
 YIELD value
 WITH value, apoc.text.replace(value.transfer.value, "£", "") AS transferValue
 WHERE transferValue <> "?" AND transferValue <> "-"
 
 MERGE (p:Player {id: value.player.href})
-SET p.name = value.player.name, p.image = value.player.image
+SET p.name = value.player.name, p.image = value.player.image,
+p.position = value.player.position, p.age = value.player.age, p.nationality = value.player.nationality
 
 MERGE (from:Club {id: value.from.href})
 SET from.name = value.from.name
@@ -45,7 +46,7 @@ MERGE (t)-[:OF_PLAYER]->(p)
 MERGE (t)-[:FROM_CLUB]->(from)
 MERGE (t)-[:TO_CLUB]->(to);
 
-call apoc.load.json("https://github.com/mneedham/football-transfers/raw/master/data/leagues.json")
+call apoc.load.json("https://raw.githubusercontent.com/quynhdd/sematic/master/data/leagues.json")
 YIELD value
 MATCH (l:League {id: value.league.id})
 SET l.image = value.image, l.name = value.league.name

@@ -1,0 +1,243 @@
+﻿.f-13 {
+    font-size: 14px !important;
+}
+
+.pd-right-0 {
+    padding-right: 0px !important;
+}
+
+.pd-left-15 {
+    padding-left: 15px !important;
+}
+
+.pd-right-15 {
+    padding-right: 15px !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.card-body .form-group label {
+    font-weight: 500 !important;
+    margin-bottom: 0px;
+    margin-left: -5px;
+}
+
+.background-source {
+    background-color: #00008a !important;
+}
+
+.color-source {
+    color: #00008a !important;
+}
+
+.rz-cell-data .rz-button {
+    background-color: #00008a !important;
+}
+/*.rz-paginator-pages a {
+    background-color: #00008a !important;
+}*/
+.rz-paginator-next {
+    background-color: #00008a !important;
+}
+
+.rz-paginator-last {
+    background-color: #00008a !important;
+}
+
+.rz-column-title .rz-button {
+    background-color: #00008a !important;
+}
+
+    .rz-column-title .rz-button i {
+        color: white !important;
+    }
+
+.rz-paginator-page.rz-state-active {
+    color: black !important;
+}
+
+.card-footer button {
+    background-color: #00008a !important;
+}
+
+.height-65 {
+    height: 65px !important;
+}
+
+.postion {
+    position: absolute;
+    right: 0px;
+    left: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.nav ul li p {
+    width: 165px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.padding-top-bottom-15 {
+    padding: 4px 5px 10px 5px;
+}
+
+.td_search {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    padding-bottom: 20px;
+}
+
+    .td_search p {
+        font-size: 0.9rem;
+        color: #3a474d;
+    }
+
+.padding-8 {
+    padding: 8px;
+    margin: 0px;
+}
+
+#search {
+    background-color: #00377A;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding: 6px;
+    font-size: 12px;
+}
+
+.card-body .row .col-md-6 .form-group {
+    margin-bottom: 0rem !important;
+}
+
+.card-body .form-group {
+    margin-bottom: 0rem !important;
+}
+
+.col-md-6 .card .card-body {
+    padding: 0.5rem !important;
+}
+
+.sidebar {
+    background-image: url('../dist/img/siderbarimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card .card-body {
+    padding: 0.5rem !important;
+}
+
+.card card-default .card-footer .btn {
+    font-size: 0.85rem !important;
+}
+
+.mt-2 ul li p {
+    line-height: 14px;
+}
+
+.user-header {
+    width: 100%;
+    background-image: url('../dist/img/siderbarimg.png');
+    height: 120px !important;
+    padding: 10px;
+    text-align: center !important;
+    color: white !important;
+    opacity: 0.9;
+}
+
+.user-body p {
+    color: #6c757d !important;
+}
+
+.custom-div {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.user-footer a {
+    background-color: #fff !important;
+    color: red !important;
+    font-size: 14px !important;
+}
+
+.form-inline {
+    margin-left: 0px !important;
+    padding: 12px 0px;
+}
+
+    .form-inline button {
+        background: #007BFF;
+        color: #fff;
+    }
+
+.mt-2 .btn-navbar {
+    cursor: auto !important;
+}
+
+.mt-2 .btn-navbar {
+    cursor: auto !important;
+    color: white;
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-nav .nav-pushmenu {
+        display: none !important;
+    }
+}
+
+.rz-datatable-scrollable-header-box table tr th div {
+    padding-top: 10px;
+}
+
+.form-group .rz-radio-button-list-vertical .rz-radio-btn label {
+    margin-left: 5px !important;
+    font-size: .875rem;
+}
+.form-group .rz-radio-button-list-horizontal .rz-radio-btn label {
+    margin-left: 5px !important;
+    font-size: .875rem;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.flex-fill {
+    flex: 1;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.rz-radio-btn {
+    margin: 10px 10px 0 10px;
+}
+
+    .rz-radio-btn label {
+        font-size: 0.875rem;
+        font-weight: 500 !important;
+    }
+
+/*.rz-dropdown {
+    width: 100%;
+    display: block !important;
+}*/

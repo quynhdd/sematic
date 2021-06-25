@@ -1,0 +1,23 @@
+﻿@page "/MoneyFlow"
+@inherits MoneyFlowBase
+
+<h1>Tổng lệ phí chuyển nhượng cầu thủ của quốc gia</h1>
+<Radzen.Blazor.RadzenGrid AllowFiltering="true" PagerPosition="Radzen.PagerPosition.Bottom" AllowPaging="true" PageSize="10" AllowSorting="true" Data="@mnf" @ref="grv_transfer" TItem="MoneyF" AllowColumnResize="true">
+    <Columns>
+        <RadzenGridColumn Width="40px" TItem="MoneyF" Title="STT" Filterable="false" Sortable="false" TextAlign="Radzen.TextAlign.Center">
+            <Template Context="fromCountry">
+                @(  (((grv_transfer.CurrentPage) * grv_transfer.PageSize) + (mnf.IndexOf(fromCountry))) + 1 )
+            </Template>
+        </RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="fromCountry" Title="Nước chuyển nhượng" Width="15%" TextAlign="Radzen.TextAlign.Left"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="toCountry" Title="Nước mua lại" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="total" Title="Tổng tiền" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="player" Title="Cầu thủ" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="fee" Title="Phí" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+        <Radzen.Blazor.RadzenGridColumn TItem="MoneyF" Property="numberOfTransfers" Title="Hạng chuyển nhượng" Width="15%" TextAlign="Radzen.TextAlign.Right"></Radzen.Blazor.RadzenGridColumn>
+    </Columns>
+</Radzen.Blazor.RadzenGrid>
+
+@code {
+
+}
